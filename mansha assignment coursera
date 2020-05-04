@@ -1,0 +1,85 @@
+
+R version 3.2.1 (2015-06-18) -- "World-Famous Astronaut"
+Copyright (C) 2015 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> <- function(x = numeric()) {
+Error: unexpected assignment in "<-"
+>         m <- NULL
+>         set <- function(y) {
++                 x <<- y
++                 m <<- NULL
++         }
+>         get <- function() x
+>         setmean <- function(mean) m <<- mean
+>         getmean <- function() m
+>         list(set = set, get = get,
++              setmean = setmean,
++              getmean = getmean)
+$set
+function (y) 
+{
+    x <<- y
+    m <<- NULL
+}
+
+$get
+function () 
+x
+
+$setmean
+function (mean) 
+m <<- mean
+
+$getmean
+function () 
+m
+
+> <- function(x = matrix()) {
+Error: unexpected assignment in "<-"
+> 
+> inv <- NULL
+> set <- function(y) {
++ x <<- y
++ inv <<- NULL
++ }
+> get <- function() x
+> setinv <- function(inverse) inv <<- inverse
+> getinv <- function() inv
+> list(set = set, get = get, setinv = setinv, getinv = getinv)
+$set
+function (y) 
+{
+    x <<- y
+    inv <<- NULL
+}
+
+$get
+function () 
+x
+
+$setinv
+function (inverse) 
+inv <<- inverse
+
+$getinv
+function () 
+inv
+
+> 
